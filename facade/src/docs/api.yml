@@ -1,0 +1,32 @@
+openapi: '3.0.0'
+info:
+  description: 'BFF API'
+  version: '0.1.0'
+  title: 'Backend For Frontend (BFF) API'
+  contact:
+    email: 'support@idcore.com'
+servers:
+  - url: 'http://localhost:8000/api'
+
+tags:
+  - name: 'status'
+    description: 'API status/health endpoints'
+schemes:
+  - 'https'
+  - 'http'
+
+paths:
+  /ready:
+    get:
+      tags:
+        - 'status'
+      summary: 'Reports back the status of the BFF'
+      description: 'Reports the status of the BFF'
+      responses:
+        '200':
+          description: 'BFF is healthy'
+          content:
+            application/json:
+              schema:
+                type: string
+                example: 'healthy'

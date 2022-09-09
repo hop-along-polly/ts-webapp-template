@@ -1,0 +1,12 @@
+{
+  "testEnvironment": "node",
+  "transform": {
+    "^.+\\.ts?$": "ts-jest"
+  },
+  "modulePathIgnorePatterns": ["/node_modules/*", "index.js"],
+  "moduleNameMapper": {
+    "@controllers/(.*)": ["<rootDir>/src/controllers/$1"],
+    "@routes/(.*)": ["<rootDir>/src/routes/$1"],
+    "@routes": ["<rootDir>/src/routes"]
+  }
+}
